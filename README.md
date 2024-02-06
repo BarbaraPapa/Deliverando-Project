@@ -1,7 +1,7 @@
 # Deliverando
 ### Food Delivery 
 ---
-## A MERN stack project by  Diego, Daniel, Julian, Barbara
+## A MERN stack project by Barbara, Daniel, Diego 
 
 
 
