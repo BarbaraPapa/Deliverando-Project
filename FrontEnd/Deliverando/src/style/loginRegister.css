@@ -1,3 +1,10 @@
+.login{
+  & h1{
+    margin-bottom: 5rem;
+    font-size: 3rem;
+  }
+}
+
 .login form {
   display: flex;
   flex-direction: column;
@@ -5,13 +12,9 @@
   margin: auto;
 }
 
-.login label {
-  margin-top: 1rem;
-}
-
 .login input {
   padding: 8px;
-  margin-bottom: 15px;
+  border-radius: 0.2rem;
 }
 
 .login button {
@@ -20,6 +23,10 @@
   color: #fff;
   border: none;
   cursor: pointer;
+  border-radius: 0.2rem;
+  margin-top: 3rem;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 .login button:hover {
@@ -28,12 +35,13 @@
 
 .login p {
   text-align: center;
-  margin-top: 20px;
+  margin-top: 50px;
 }
 
 .login a {
   color: #007bff;
   text-decoration: none;
+  font-weight: bold;
 }
 
 .login a:hover {

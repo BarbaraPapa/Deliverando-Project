@@ -55,8 +55,6 @@ export default function Login() {
           <br />
           <button>Login</button> 
         </form>
-        <p>or do it with other accounts</p>
-        <p>PUT OTHER SOCIALS HERE</p>
         <p>Don't have an account? <a href="#" onClick={showRegistation}>Sign Up!</a></p>
       </div>
     </>

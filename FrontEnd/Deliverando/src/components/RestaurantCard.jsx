@@ -37,7 +37,7 @@ export default function RestaurantCard() {
                 alt="Restaurant picture"
               />
               <h1>{product.restaurantName}</h1>
-              <p>Rating: {product.rating}</p>
+              <p>Rating: {product.rating}⭐</p>
               <p>Minimum Order: €10 </p>
               <p>Delivery time: 30-50 min | €2.00 Delivery Charge</p>
             </div>

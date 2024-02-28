@@ -16,7 +16,7 @@ export default function NavBar() {
   return (
     <nav className="navbar">
 
-      <img src="pubblic/logo.png" style={{ width: 100 }} alt="logo" />
+      <img src="pubblic/logo.png" alt="logo" />
 
     <div>
       <ul>

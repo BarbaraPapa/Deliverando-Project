@@ -1,110 +1,52 @@
 import { useContext } from "react";
 import { useLocation } from "react-router-dom";
 import { MyContext } from "../context/context";
-import "../style/menuPage.css"
+import "../style/menuPage.css";
 
 export default function MenuPage() {
   const { cart, setCart } = useContext(MyContext);
   const { state } = useLocation();
   console.log(state);
 
-  // create a new array that includes all the elements from the 
-  // previous cart array and adds the new dish  
-  function addToCart (dish){
+  // create a new array that includes all the elements from the
+  // previous cart array and adds the new dish
+  function addToCart(dish) {
     setCart((prevCart) => [...prevCart, dish]);
-  } 
+  }
 
   return (
     <div className="menu">
       {state && (
         <div>
           <h1>{state.restaurantName}</h1>
-          <div>
-            <button>Popular</button>
-            <button>Deals</button>
-            <button>Mains</button>
-            <button>Drinks</button>
-          </div>
-          <div>
-            <p>Minimum order €15 </p>
-            <p>20-50 min.</p>
+          <div className="info">
+            <p>Minimum order €10 </p>
+            <p>Delivery time: 20-40 min.</p>
             <p>Delivery charge €2.50 </p>
           </div>
 
           {state.dishes.map((dish) => {
             return (
-              <div key={dish._id}>               
-                  <div>
-                    <img
-                      src={dish.image_url}
-                      width={200}
-                      alt="restaurant image"
-                    />
-                    <h2>{dish.dishName}</h2>
-                    <p>{dish.ingredients}</p>
-                    <button onClick={() => addToCart(dish)}>Add to Cart</button>
+              <div className="card-container" key={dish._id}>
+
+                <section>
+
+                  <img src={dish.image_url} alt="restaurant image" />
+
+                  <div className="ingredients">
+                    <h2>{dish.dishName} <span>{dish.price}€</span> </h2>
+                    <p>{dish.ingredients.join(" - ")}</p>    
                   </div>
-                </div>        
+
+                </section>
+
+                <button onClick={() => addToCart(dish)}>Add to Cart</button>
+
+              </div>
             );
           })}
         </div>
       )}
-
     </div>
   );
 }
-
-
-// import React, { useContext } from "react";
-// import { useLocation } from "react-router-dom";
-// import { MyContext } from "../context/context";
-
-// export default function MenuPage() {
-//   const { cart, setCart } = useContext(MyContext);
-//   const { state } = useLocation();
-//   console.log(state);
-
-//   function addToCart(dish, index) {
-//     setCart((prevCart) => [...prevCart, { ...dish, index }]);
-//   }
-
-//   return (
-//     <div>
-//       {state && (
-//         <div>
-//           <h1>{state.restaurantName}</h1>
-//           <div>
-//             <button>Popular</button>
-//             <button>Deals</button>
-//             <button>Mains</button>
-//             <button>Drinks</button>
-//           </div>
-//           <div>
-//             <p>Minimum order €15</p>
-//           </div>
-
-//           <div>
-//             <p>20-50 min.</p>
-//             <p>Delivery charge €2.50</p>
-//           </div>
-
-//           {state.dishes.map((dish, index) => {
-//             return (
-//               <div key={index}>
-//                 <div>
-//                   <div>
-//                     <h2>{dish.dishName}</h2>
-
-//                     <img src={dish.image_url} width={200} alt="Restaurant image" />
-//                     <p>{dish.ingredients}</p>
-//                     <button onClick={() => addToCart(dish, index)}>Add to Cart</button>
-//                   </div>
-//                 </div>
-//               </div>
-//             );
-//           })}
-//         </div>
-//       )}
-//     </div>
-//   );
-// }

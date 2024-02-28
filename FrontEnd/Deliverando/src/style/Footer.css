@@ -12,10 +12,29 @@
   .footer a{
     text-decoration: none;
     color: var(--black-text);
+    font-weight: bold;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    border: 2px solid  var(--orange-text);
+
+    display: flex;
+    align-items: center;
+
+    & img{
+      width: 30px;
+      margin-right: 0.5rem;
+    }
+  }
+
+  .footer a:hover{
+    color: var(--orange-text);
   }
   
   .imageHolder {
     position: relative;
     max-width: 100%;
+    & img{
+      width: 100px;
+    }
   }
  

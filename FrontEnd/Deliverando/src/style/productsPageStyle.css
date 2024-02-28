@@ -2,23 +2,23 @@
 /* WIP */
 .total {
   display: flex;
-  max-width: 1700px;
-  margin: 0 auto;
+  max-width: 1500px;
+  margin: 5rem auto;
+  padding: 2rem;
+  background: var(--orange-bg);
+  border-radius: 0.5rem;
 }
 
 .Side-Panel {
   flex: 0 0 20%;
   box-sizing: border-box;
-  padding: 20px;
-  background-color: #f5f3f1;
-  border-right: 1px solid #ccc;
+  padding: 40px;
+  background-color: #edeceb;
+  border-right: 1px solid #b3b1b1;
   border-radius: 10px;
-  margin: 1rem;
+  margin: 0.5rem 2rem;
 }
 
-.Side-Option {
-  margin-bottom: 15px;
-}
 
 /* SEARCH BOX */
 

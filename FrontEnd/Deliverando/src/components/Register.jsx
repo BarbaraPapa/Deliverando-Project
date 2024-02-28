@@ -46,7 +46,7 @@ export default function Register() {
 
   return (
     <div className="login">
-      <h1>Register User Page</h1>
+      <h1>Sign Up</h1>
       <Toaster position="top-center" /> {/* toast position*/}
       <form onSubmit={registerUser}>
         <label htmlFor="firstname">First Name: </label>
@@ -57,10 +57,10 @@ export default function Register() {
         <input type="email" id="email" name="email" /> <br />
         <label htmlFor="password">Password : </label>
         <input type="password" id="password" name="password" /> <br />
-        <button onClick={showRegistation}>Register</button>
+        <button onClick={showRegistation}>Sign Up</button>
       </form>
 
-      <p>Have an account already? <a href="#" onClick={showRegistation}>Sign In!</a></p>
+      <p>Have an account already? <a href="#" onClick={showRegistation}>Go to Login</a></p>
     </div>
   );
 }
